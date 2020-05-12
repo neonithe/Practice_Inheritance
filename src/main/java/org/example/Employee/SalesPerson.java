@@ -1,5 +1,6 @@
 package org.example.Employee;
 
+import java.time.LocalDate;
 import java.util.Arrays;
 
 public class SalesPerson extends Employee {
@@ -7,8 +8,8 @@ public class SalesPerson extends Employee {
     private String[] clients = new String[10];
     private int aquiredClients;
 
-    public SalesPerson(int id, String name, double salary, int dateHired) {
-        super(id, name, salary, dateHired);
+    public SalesPerson(int id, String name, double salary) {
+        super(id, name, salary);
     }
 
     public String[] getClients() {

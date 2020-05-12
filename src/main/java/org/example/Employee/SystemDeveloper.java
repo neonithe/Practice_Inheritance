@@ -1,5 +1,6 @@
 package org.example.Employee;
 
+import java.time.LocalDate;
 import java.util.Arrays;
 
 public class SystemDeveloper extends Employee {
@@ -7,9 +8,10 @@ public class SystemDeveloper extends Employee {
     private String[] certificates = new String[10];
     private String[] languages = new String[10];
 
-    public SystemDeveloper(int id, String name, double salary, int dateHired) {
-        super(id, name, salary, dateHired);
+    public SystemDeveloper(int id, String name, double salary) {
+        super(id, name, salary);
     }
+
 
     public String[] getCertificates() {
         return certificates;

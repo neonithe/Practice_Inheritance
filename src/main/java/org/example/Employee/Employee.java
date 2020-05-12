@@ -9,11 +9,11 @@ public abstract class Employee {
     private double salary;
     private LocalDate dateHired;
 
-    public Employee(int id, String name, double salary, LocalDate dateHired) {
+    public Employee(int id, String name, double salary) {
         this.id = id;
         this.name = name;
         this.salary = salary;
-        this.dateHired = dateHired;
+
 
     }
 
@@ -45,14 +45,14 @@ public abstract class Employee {
         return dateHired;
     }
 
-    public void setDateHired(LocalDate dateHired) {
-        this.dateHired = dateHired;
+    public void setDateHired(String date) {
+        dateHired = LocalDate.parse(date);
     }
 
     public abstract void calc();
 
     public String toString(){
-        return "Id: " + id + " | Name: " + name + " | Salary: " + salary;
+        return "Id: " + id + " | Name: " + name + " | Salary: " + salary + " | Hired: " +dateHired;
     }
 
 
