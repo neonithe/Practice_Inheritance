@@ -69,7 +69,6 @@ public class App
         // New salary Sale: 25000 + (2*500 + 2*1000 = 3000) =28 000
         System.out.println(employee2);
 
-
     }
 
 
