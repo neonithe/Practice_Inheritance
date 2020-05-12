@@ -9,10 +9,11 @@ public abstract class Employee {
     private double salary;
     private LocalDate dateHired;
 
-    public Employee(int id, String name, double salary) {
+    public Employee(int id, String name, double salary, String date) {
         this.id = id;
         this.name = name;
         this.salary = salary;
+        setDateHired(date);
 
 
     }

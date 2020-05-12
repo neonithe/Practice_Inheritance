@@ -30,8 +30,7 @@ public class App
     {
 
         /*** Employee 1 : sysdev *****************************************************************************/
-        SystemDeveloper employee1 = new SystemDeveloper(1, "Mattias", 25000);
-        employee1.setDateHired("2020-05-11");
+        SystemDeveloper employee1 = new SystemDeveloper(1, "Mattias", 25000,"2020-05-11");
         // Add cert and lang to increase salary
         String[] cert = new String[10];
         cert[0] = "Cert1";
@@ -47,8 +46,7 @@ public class App
         employee1.calc();
 
         /*** Employee 2 : Sale *******************************************************************************/
-        SalesPerson employee2 = new SalesPerson(1,"Martin",25000);
-        employee2.setDateHired("2020-05-11");
+        SalesPerson employee2 = new SalesPerson(1,"Martin",25000, "2020-05-11");
         // Add clients to increase salary
         String[] clients = new String[10];
         clients[0] = "Client 1";
@@ -65,16 +63,14 @@ public class App
         /**** END EMPLOYEES ***********************************************************************************/
 
         //Print
-        // New salary SystemDev: 25000 + (2*1000 + 2*1500 = 5000) =30 000
+        // New salary SystemDev: 25000 + (3*1000 + 2*1500 = 5000) =30 000
         System.out.println(employee1);
         System.out.println();
         // New salary Sale: 25000 + (2*500 + 2*1000 = 3000) =28 000
         System.out.println(employee2);
 
-    }
-    public void test(){
-        LocalDate.parse("2020-05-01");
-    }
+        employee1.calc();
 
+    }
 
 }

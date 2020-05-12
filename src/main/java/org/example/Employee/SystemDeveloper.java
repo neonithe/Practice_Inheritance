@@ -8,8 +8,8 @@ public class SystemDeveloper extends Employee {
     private String[] certificates = new String[10];
     private String[] languages = new String[10];
 
-    public SystemDeveloper(int id, String name, double salary) {
-        super(id, name, salary);
+    public SystemDeveloper(int id, String name, double salary, String date) {
+        super(id, name, salary, date);
     }
 
 
@@ -29,13 +29,14 @@ public class SystemDeveloper extends Employee {
         this.languages = languages;
     }
 
+
     @Override
     public void calc(){
-
-        // Get the number of elements in array
+        // Get arrays
         String[] cert = getCertificates();
         String[] lang = getLanguages();
 
+        // Get the number of elements in array
         int certCount =0;
         int langCount =0;
 
@@ -44,19 +45,20 @@ public class SystemDeveloper extends Employee {
                    certCount++;
                }
         }
-        for(int i=0; i< cert.length; i++) {
-            if (cert[i] != null) {
+        for(int i=0; i< lang.length; i++) {
+            if (lang[i] != null) {
                 langCount++;
             }
         }
+        double baseSalary = getSalary();
         double sum = certCount * 1000;
         double sum2 = langCount * 1500;
 
         // Calculate the new salary
-        double baseSalary = getSalary();
         double result = baseSalary+sum+sum2;
 
         setSalary(result);
+
     }
 
     @Override
